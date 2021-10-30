@@ -156,8 +156,10 @@ public class Lander : MonoBehaviour
                 mainThrusterAnim.SetBool("ApplyingThrust", false);
             }
         }
+        ///        if (Input.GetKeyDown(KeyCode.Space))
 
-        if (Input.GetAxis("Horizontal") > 0)
+        // if (Input.GetAxis("Horizontal") > 0)
+        if (Input.GetKey("a"))
         {
             shouldPlayThrustSfx = true;
             ApplyForce(leftThruster, sideThrustPower);
@@ -173,8 +175,7 @@ public class Lander : MonoBehaviour
                 leftThrusterAnim.SetBool("ApplyingThrust", false);
             }
         }
-
-        if (Input.GetAxis("Horizontal") < 0)
+        if (Input.GetKey("d"))
         {
             shouldPlayThrustSfx = true;
             ApplyForce(rightThruster, sideThrustPower);
