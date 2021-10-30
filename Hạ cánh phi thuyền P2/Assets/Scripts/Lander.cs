@@ -140,7 +140,7 @@ public class Lander : MonoBehaviour
             return;
         }
 
-        if (Input.GetAxis("Vertical") > 0)
+        if (Input.GetKey("w"))
         {
             shouldPlayThrustSfx = true;
             ApplyForce(bottomThruster, mainThrustPower);
@@ -219,7 +219,7 @@ public class Lander : MonoBehaviour
     {
         if (hitInfo.relativeVelocity.magnitude > 1)
         {
-            HandleLanderDestroy();
+           // HandleLanderDestroy();
         }
     }
 
